@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magda Impresos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@400;700&family=Pacifico&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #2ECC40, #0074D9, #FF851B);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        header:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .logo img {
+            max-width: 200px;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .logo img:hover {
+            transform: rotate(360deg) scale(1.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+            padding: 15px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2em;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #FF851B;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            height: 3px;
+            background: #FF851B;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .container {
+            padding: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            animation: slideIn 1s ease-out;
+        }
+
+        .contact-info h2 {
+            color: #0074D9;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            animation: slideIn 1s ease-out;
+        }
+
+        .contact-form h2 {
+            color: #0074D9;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #0074D9;
+            box-shadow: 0 0 5px rgba(0, 116, 217, 0.5);
+            outline: none;
+        }
+
+        .contact-form button {
+            background: #2ECC40;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Oswald', sans-serif;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: #27ae60;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <!-- Reemplaza con la URL de tu imagen del logotipo -->
+            <img src="https://i.imgur.com/nico-en-la-comida-iRqWdFx" alt="Logotipo de Magda Impresos">
+        </div>
+        <h1>Magda Impresos</h1>
+    </header>
+
+    <nav>
+        <a href="#contact-info">Contacto</a>
+        <a href="#contact-form">Formulario</a>
+    </nav>
+
+    <div class="container">
+        <section id="contact-info" class="contact-info">
+            <h2>Contáctanos</h2>
+            <p><strong>Teléfono:</strong> 8117198606</p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/528117198606" style="color: #0074D9;">8117198606</a></p>
+            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/magdaimpresos?mibextid=LQQJ4d" style="color: #0074D9;">Magda Impresos</a></p>
+            <p><strong>Correo Electrónico:</strong> <a href="mailto:magdaimpresos@gmail.com" style="color: #0074D9;">magdaimpresos@gmail.com</a></p>
+        </section>
+
+        <section id="contact-form" class="contact-form">
+            <h2>Envíanos un mensaje</h2>
+            <form action="https://formspree.io/f/mdknzpgd" method="POST">
+                <input type="text" name="name" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2024 Magda Impresos. Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>
